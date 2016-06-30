@@ -17,6 +17,6 @@ int main(void){
 	printf("Getting CID..\n\n");
 	sdmmc_get_cid(PROD, (uint32_t*) CID);
 	for(int i = 0; i < sizeof(CID); i++){
-		printf("%02X", CID[i]);
+		printf("%02X", (unsigned int) CID[i]);
 	}
 }
